@@ -59,6 +59,19 @@
  
  Calling this method implicitly calls the prepareToPlay method if the audio player is not already prepared to play.
  */
+
+/**Creates and returns a new C4Sample with a given file URL.
+ 
+ @param sampleURL The file URL of a sample to be loaded.
+ */
++(C4Sample *)sampleFromURL:(NSURL *)sampleURL;
+
+/**Initializes a C4Sample with a given file URL.
+ 
+ @param sampleURL The file URL of a sample to be loaded.
+ */
+-(id)initWithSampleURL:(NSURL *)sampleURL;
+
 -(void)play;
 
 /**Plays a sound asynchronously, starting at a specified point in the audio output device’s timeline.

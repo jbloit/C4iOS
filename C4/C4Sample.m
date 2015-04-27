@@ -47,6 +47,21 @@
     return self;
 }
 
++(C4Sample *)sampleFromURL:(NSURL *)sampleURL {
+    return [[C4Sample alloc] initWithSampleURL:sampleURL];
+}
+
+-(id)initWithSampleURL:(NSURL *)sampleURL {
+    self = [super init];
+    if(self != nil) {
+        _player = [[AVAudioPlayer alloc] initWithContentsOfURL:sampleURL error:nil];
+        self.enableRate = YES;
+        self.player.delegate = self;
+        [self setup];
+    }
+    return self;
+}
+
 -(void)play {
     [self.player play];
 }
