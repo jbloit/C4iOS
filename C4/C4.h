@@ -64,6 +64,6 @@
 #import "C4GL1Renderer.h"
 #import "C4GL.h"
 
-// Workspace
-#import "C4WorkSpace.h"
-#import "C4AppDelegate.h"
+//// Workspace
+//#import "C4WorkSpace.h"
+//#import "C4AppDelegate.h"
